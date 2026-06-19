@@ -1,0 +1,18 @@
+---
+source: tests/common/mod.rs
+expression: explain
+---
+{
+  "summary": "Agent attempted to fix a failure in auth_session_expiry. It investigated and modified auth.go, then validated via auth_session_expiry.",
+  "root_cause": "Test failure in auth_session_expiry — session token not refreshed after expiry",
+  "decision_chain": [
+    "pattern detected → test_failed (auth_session_expiry) → modifications (auth.go) → test_passed → causal arc identified",
+    "pattern detected → file changes (auth.go) → verification → test_passed → causal arc identified",
+    "file_modified (auth.go) → update implementation",
+    "test_failed (auth_session_expiry) → regression or bug detected → motivates investigation",
+    "file_modified (auth.go) → apply fix or implement solution",
+    "test_passed (auth_session_expiry) → fix validated → problem resolved"
+  ],
+  "problem_statement": "Resolve failing test: auth_session_expiry",
+  "resolution_flow": "1. Detected failure in auth_session_expiry. 2. Modified auth.go. 3. Validated fix — auth_session_expiry passed."
+}

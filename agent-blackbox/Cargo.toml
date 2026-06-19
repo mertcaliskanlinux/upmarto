@@ -1,0 +1,38 @@
+[workspace]
+members = [".", "upmarto-sdk-rust", "upmarto-cli"]
+resolver = "2"
+
+[package]
+name = "upmarto"
+version = "0.1.0"
+edition = "2021"
+description = "Upmarto — Memory and Reasoning for AI Agents"
+default-run = "upmarto-server"
+
+[[bin]]
+name = "upmarto-server"
+path = "src/main.rs"
+
+[dependencies]
+axum = "0.8"
+tokio = { version = "1", features = ["full"] }
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
+uuid = { version = "1", features = ["v4", "serde"] }
+rusqlite = { version = "0.32", features = ["bundled"] }
+tracing = "0.1"
+tracing-subscriber = { version = "0.3", features = ["env-filter"] }
+thiserror = "2"
+dotenvy = "0.15"
+tower-http = { version = "0.6", features = ["cors"] }
+
+[dev-dependencies]
+upmarto = { path = "." }
+upmarto-sdk = { path = "upmarto-sdk-rust" }
+assert_cmd = "2"
+tokio = { version = "1", features = ["full", "test-util"] }
+reqwest = { version = "0.12", features = ["json"] }
+insta = { version = "1", features = ["json"] }
+serde_json = "1"
+tempfile = "3"
+wiremock = "0.6"

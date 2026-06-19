@@ -1,0 +1,18 @@
+---
+source: tests/common/mod.rs
+expression: explain
+---
+{
+  "summary": "Agent attempted to fix a failure in cache_invalidation. It investigated and modified cache.rs, then validated via cache_invalidation.",
+  "root_cause": "Test failure in cache_invalidation — stale entries not purged on TTL expiry",
+  "decision_chain": [
+    "pattern detected → test_failed (cache_invalidation) → modifications (cache.rs) → test_passed → causal arc identified",
+    "pattern detected → file changes (cache.rs) → verification → test_passed → causal arc identified",
+    "file_modified (cache.rs) → update implementation",
+    "test_failed (cache_invalidation) → regression or bug detected → motivates investigation",
+    "file_modified (cache.rs) → apply fix or implement solution",
+    "test_passed (cache_invalidation) → fix validated → problem resolved"
+  ],
+  "problem_statement": "Resolve failing test: cache_invalidation",
+  "resolution_flow": "1. Detected failure in cache_invalidation. 2. Modified cache.rs. 3. Validated fix — cache_invalidation passed."
+}

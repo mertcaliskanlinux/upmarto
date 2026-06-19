@@ -1,0 +1,51 @@
+{
+  "name": "@upmarto/sdk",
+  "version": "0.1.0",
+  "description": "Upmarto TypeScript SDK — v1 API client for browser and Node.js",
+  "license": "MIT",
+  "author": "Upmarto Contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mertcaliskanlinux/upmarto.git",
+    "directory": "agent-blackbox/upmarto-sdk-ts"
+  },
+  "homepage": "https://github.com/mertcaliskanlinux/upmarto/tree/main/agent-blackbox/upmarto-sdk-ts#readme",
+  "bugs": {
+    "url": "https://github.com/mertcaliskanlinux/upmarto/issues"
+  },
+  "keywords": [
+    "upmarto",
+    "ai-agents",
+    "event-capture",
+    "debugging",
+    "timeline",
+    "cursor",
+    "vscode"
+  ],
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

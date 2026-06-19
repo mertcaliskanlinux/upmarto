@@ -1,0 +1,16 @@
+services:
+  upmarto:
+    build: .
+    ports:
+      - "${UPMARTO_HOST_PORT:-8080}:8080"
+    environment:
+      APP_HOST: 0.0.0.0
+      APP_PORT: 8080
+      DATABASE_PATH: /data/events.log
+      SQLITE_PATH: /data/metadata.db
+      PUBLIC_BASE_URL: ${PUBLIC_BASE_URL:-}
+    volumes:
+      - upmarto-data:/data
+
+volumes:
+  upmarto-data:

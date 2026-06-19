@@ -1,0 +1,2 @@
+review:
+  warn_on_snapshot_changes: true

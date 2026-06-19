@@ -1,0 +1,45 @@
+{
+  "name": "@upmarto/cursor",
+  "version": "0.1.0",
+  "description": "Cursor IDE hooks for Upmarto auto event capture",
+  "license": "MIT",
+  "author": "Upmarto Contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mertcaliskanlinux/upmarto.git",
+    "directory": "agent-blackbox/upmarto-cursor"
+  },
+  "homepage": "https://github.com/mertcaliskanlinux/upmarto/tree/main/agent-blackbox/upmarto-cursor#readme",
+  "bugs": {
+    "url": "https://github.com/mertcaliskanlinux/upmarto/issues"
+  },
+  "keywords": [
+    "upmarto",
+    "cursor",
+    "ai-agents",
+    "hooks",
+    "event-capture"
+  ],
+  "type": "module",
+  "files": [
+    "dist",
+    "hooks.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "hook": "node dist/hook.js",
+    "prepublishOnly": "npm run build"
+  },
+  "bin": {
+    "upmarto-cursor-hook": "./dist/hook.js"
+  },
+  "dependencies": {
+    "@upmarto/sdk": "file:../upmarto-sdk-ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "typescript": "^5.7.0"
+  }
+}

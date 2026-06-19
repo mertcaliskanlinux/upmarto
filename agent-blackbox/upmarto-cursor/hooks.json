@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "hooks": {
+    "sessionStart": [
+      { "command": "node upmarto-cursor/dist/hook.js sessionStart" }
+    ],
+    "beforeReadFile": [
+      { "command": "node upmarto-cursor/dist/hook.js beforeReadFile" }
+    ],
+    "afterFileEdit": [
+      { "command": "node upmarto-cursor/dist/hook.js afterFileEdit" }
+    ],
+    "beforeShellExecution": [
+      { "command": "node upmarto-cursor/dist/hook.js beforeShellExecution" }
+    ],
+    "afterShellExecution": [
+      { "command": "node upmarto-cursor/dist/hook.js afterShellExecution" }
+    ],
+    "afterAgentResponse": [
+      { "command": "node upmarto-cursor/dist/hook.js afterAgentResponse" }
+    ],
+    "postToolUse": [
+      {
+        "command": "node upmarto-cursor/dist/hook.js postToolUse",
+        "matcher": "Write|StrReplace"
+      }
+    ]
+  }
+}

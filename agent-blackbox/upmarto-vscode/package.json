@@ -1,0 +1,63 @@
+{
+  "name": "upmarto-vscode",
+  "displayName": "Upmarto",
+  "description": "Capture AI agent activity into Upmarto — timelines and causal explanations for coding sessions",
+  "version": "0.1.0",
+  "publisher": "upmarto",
+  "license": "MIT",
+  "author": "Upmarto Contributors",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mertcaliskanlinux/upmarto.git",
+    "directory": "agent-blackbox/upmarto-vscode"
+  },
+  "homepage": "https://github.com/mertcaliskanlinux/upmarto/tree/main/agent-blackbox/upmarto-vscode#readme",
+  "bugs": {
+    "url": "https://github.com/mertcaliskanlinux/upmarto/issues"
+  },
+  "keywords": [
+    "upmarto",
+    "ai-agents",
+    "debugging",
+    "timeline",
+    "explain",
+    "event-capture"
+  ],
+  "type": "module",
+  "engines": {
+    "vscode": "^1.85.0"
+  },
+  "categories": [
+    "Other",
+    "Debuggers"
+  ],
+  "activationEvents": [
+    "onStartupFinished"
+  ],
+  "main": "./dist/extension.js",
+  "contributes": {
+    "configuration": {
+      "title": "Upmarto",
+      "properties": {
+        "upmarto.enabled": {
+          "type": "boolean",
+          "default": true,
+          "description": "Enable passive event capture to Upmarto (uses .upmarto/config.json via SDK)"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "compile": "tsc -p .",
+    "build": "npm run compile",
+    "watch": "tsc -p . --watch"
+  },
+  "dependencies": {
+    "@upmarto/sdk": "file:../upmarto-sdk-ts"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.85.0",
+    "typescript": "^5.7.0"
+  }
+}
