@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="agent-blackbox/branding/icon-256.png" alt="Upmarto" width="128" />
+</p>
+
 # Upmarto
 
 [![CI](https://github.com/mertcaliskanlinux/upmarto/actions/workflows/ci.yml/badge.svg)](https://github.com/mertcaliskanlinux/upmarto/actions/workflows/ci.yml)
