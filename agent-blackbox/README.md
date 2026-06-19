@@ -60,7 +60,7 @@ cp upmarto-cursor/hooks.json .cursor/hooks.json
 # Restart Cursor after saving hooks.json
 ```
 
-Full guide: [docs/SDK.md](docs/SDK.md)
+Full guide: [docs/SDK.md](docs/SDK.md) · [Kullanıcı kurulum rehberi (TR)](docs/USER_GUIDE.md)
 
 ```env
 APP_HOST=127.0.0.1

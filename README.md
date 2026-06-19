@@ -31,7 +31,7 @@ cargo run -p upmarto-cli -- workflow
 cargo run -p upmarto-cli -- explain
 ```
 
-Full documentation: [agent-blackbox/README.md](agent-blackbox/README.md)
+Full documentation: [agent-blackbox/README.md](agent-blackbox/README.md) · [Kullanıcı rehberi (TR)](agent-blackbox/docs/USER_GUIDE.md)
 
 ## Community
 
