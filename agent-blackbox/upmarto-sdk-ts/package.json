@@ -1,6 +1,6 @@
 {
   "name": "@upmarto/sdk",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Upmarto TypeScript SDK — v1 API client for browser and Node.js",
   "license": "MIT",
   "author": "Upmarto Contributors",

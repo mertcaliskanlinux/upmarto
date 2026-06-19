@@ -13,9 +13,13 @@ Switch npm consumers:
 
 ```bash
 cd agent-blackbox
-node scripts/set-sdk-dependency.mjs registry   # before npm publish / vsce package
-node scripts/set-sdk-dependency.mjs local      # restore monorepo file: links
+node scripts/verify-registries.mjs          # pre-flight login & dry-run checks
+node scripts/set-sdk-dependency.mjs registry --verify   # swap + compile verify
+node scripts/set-sdk-dependency.mjs registry            # swap only
+node scripts/set-sdk-dependency.mjs local             # restore monorepo file: links
 ```
+
+See [REGISTRY_ONBOARDING.md](./REGISTRY_ONBOARDING.md) for account setup.
 
 ## Publish order
 

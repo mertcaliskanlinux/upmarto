@@ -1,6 +1,6 @@
 {
   "name": "@upmarto/cursor",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "description": "Cursor IDE hooks for Upmarto auto event capture",
   "license": "MIT",
   "author": "Upmarto Contributors",
@@ -33,13 +33,13 @@
     "prepublishOnly": "npm run build"
   },
   "bin": {
-    "upmarto-cursor-hook": "./dist/hook.js"
+    "upmarto-cursor-hook": "dist/hook.js"
   },
   "publishConfig": {
     "access": "public"
   },
   "dependencies": {
-    "@upmarto/sdk": "file:../upmarto-sdk-ts"
+    "@upmarto/sdk": "^0.1.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
