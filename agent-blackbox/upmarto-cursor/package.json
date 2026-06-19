@@ -35,11 +35,19 @@
   "bin": {
     "upmarto-cursor-hook": "./dist/hook.js"
   },
+  "publishConfig": {
+    "access": "public"
+  },
   "dependencies": {
     "@upmarto/sdk": "file:../upmarto-sdk-ts"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "typescript": "^5.7.0"
+  },
+  "upmarto": {
+    "registrySdkVersion": "^0.1.0",
+    "localSdkPath": "file:../upmarto-sdk-ts",
+    "publishNote": "Run: node ../scripts/set-sdk-dependency.mjs registry (see docs/PUBLISHING.md)"
   }
 }

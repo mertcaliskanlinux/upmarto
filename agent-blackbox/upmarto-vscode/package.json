@@ -1,11 +1,16 @@
 {
   "name": "upmarto-vscode",
   "displayName": "Upmarto",
-  "description": "Capture AI agent activity into Upmarto — timelines and causal explanations for coding sessions",
+  "description": "Local-first AI agent debugger — capture sessions, replay timelines, and explain root causes without the cloud.",
   "version": "0.1.0",
   "publisher": "upmarto",
   "license": "MIT",
   "author": "Upmarto Contributors",
+  "icon": "media/icon-128.png",
+  "galleryBanner": {
+    "color": "#1B1F3B",
+    "theme": "dark"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/mertcaliskanlinux/upmarto.git",
@@ -18,18 +23,23 @@
   "keywords": [
     "upmarto",
     "ai-agents",
+    "copilot",
+    "cursor",
     "debugging",
     "timeline",
     "explain",
-    "event-capture"
+    "root-cause",
+    "event-capture",
+    "local-first"
   ],
   "type": "module",
   "engines": {
     "vscode": "^1.85.0"
   },
   "categories": [
+    "Debuggers",
     "Other",
-    "Debuggers"
+    "Programming Languages"
   ],
   "activationEvents": [
     "onStartupFinished"
@@ -50,7 +60,11 @@
   "scripts": {
     "compile": "tsc -p .",
     "build": "npm run compile",
-    "watch": "tsc -p . --watch"
+    "watch": "tsc -p . --watch",
+    "prepublishOnly": "npm run compile"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "dependencies": {
     "@upmarto/sdk": "file:../upmarto-sdk-ts"
@@ -59,5 +73,10 @@
     "@types/node": "^22.10.0",
     "@types/vscode": "^1.85.0",
     "typescript": "^5.7.0"
+  },
+  "upmarto": {
+    "registrySdkVersion": "^0.1.0",
+    "localSdkPath": "file:../upmarto-sdk-ts",
+    "publishNote": "Run: node ../scripts/set-sdk-dependency.mjs registry (see docs/PUBLISHING.md)"
   }
 }
